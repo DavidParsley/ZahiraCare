@@ -237,3 +237,54 @@ footer {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+/* Profile section in the card */
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f7f7f7;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-right: 1rem;
+}
+
+.details {
+  flex: 1;
+}
+
+.details h3 {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem;
+  color: #333;
+}
+
+.details p {
+  margin: 0.3rem 0;
+  color: #555;
+}
+
+/* Right-side info in the card */
+.right-info {
+  padding: 1rem;
+  background-color: #fafafa;
+  color: #333;
+}
+
+.created-date {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+/*  Patient, Doctor, and Nurse Components Styling Ends here */
