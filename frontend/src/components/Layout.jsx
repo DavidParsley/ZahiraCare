@@ -5,9 +5,9 @@ import Navbar from './Navbar';
 
 export default function Layout() {
   return (
-    <div >
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Navbar />
-      <main>
+      <main style={{ flexGrow: 1 }}>
         <Outlet />
       </main>
       <Footer />
