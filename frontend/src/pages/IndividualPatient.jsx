@@ -34,7 +34,7 @@ export default function IndividualPatient() {
       method: "DELETE",
     })
       .then((res) => res.json())
-      .then(() => nav("/"))
+      .then(() => nav("/patients"))
       .catch((error) => console.error("Error deleting patient:", error));
   }
 
