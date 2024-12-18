@@ -6,40 +6,8 @@ export default function Footer() {
       {/* Footer */}
       <footer
         className="text-center text-lg-start"
-        style={{
-          backgroundColor: 'rgb(248,240,240)',
-          borderRadius: '10px 10px 0 0', // Add rounded corners to the footer
-          overflow: 'hidden' // Ensure that any content that overflows does not break the border radius
-        }}
+   
       >
-        {/* Section: Social media */}
-        <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-          <div className="me-5 d-none d-lg-block">
-            <span>Get connected with us on social networks:</span>
-          </div>
-
-          <div>
-            <a href="" className="me-4 text-reset" style={{ color: 'rgb(145,5,8)' }}>
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="" className="me-4 text-reset" style={{ color: 'rgb(145,5,8)' }}>
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a href="" className="me-4 text-reset" style={{ color: 'rgb(145,5,8)' }}>
-              <i className="fab fa-google"></i>
-            </a>
-            <a href="" className="me-4 text-reset" style={{ color: 'rgb(145,5,8)' }}>
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="" className="me-4 text-reset" style={{ color: 'rgb(145,5,8)' }}>
-              <i className="fab fa-linkedin"></i>
-            </a>
-            <a href="" className="me-4 text-reset" style={{ color: 'rgb(145,5,8)' }}>
-              <i className="fab fa-github"></i>
-            </a>
-          </div>
-        </section>
-
         {/* Section: Links */}
         <section className="">
           <div className="container text-center text-md-start mt-5">
@@ -47,29 +15,14 @@ export default function Footer() {
             <div className="row mt-3">
               <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                 <h6 className="text-uppercase fw-bold mb-4" style={{ color: 'rgb(145,5,8)' }}>
-                  <i className="fas fa-gem me-3"></i>Company name
+                  ZahiraCare
                 </h6>
-                <p>
-                  Here you can use rows and columns to organize your footer content.
+                <p className='slogan'>
+                "Caring Beyond Boundaries, Huduma Kwa Wote!"
+                <br></br>
+                <br></br>
                 </p>
-              </div>
-
-              <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                <h6 className="text-uppercase fw-bold mb-4" style={{ color: 'rgb(145,5,8)' }}>
-                  Products
-                </h6>
-                <p>
-                  <a href="#!" className="text-reset" style={{ color: 'rgb(145,5,8)' }}>Angular</a>
-                </p>
-                <p>
-                  <a href="#!" className="text-reset" style={{ color: 'rgb(145,5,8)' }}>React</a>
-                </p>
-                <p>
-                  <a href="#!" className="text-reset" style={{ color: 'rgb(145,5,8)' }}>Vue</a>
-                </p>
-                <p>
-                  <a href="#!" className="text-reset" style={{ color: 'rgb(145,5,8)' }}>Laravel</a>
-                </p>
+                (Translation: "Care for All!")
               </div>
 
               <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -77,33 +30,31 @@ export default function Footer() {
                   Useful links
                 </h6>
                 <p>
-                  <a href="#!" className="text-reset" style={{ color: 'rgb(145,5,8)' }}>Pricing</a>
+                  <a href="/" className="text-reset" style={{ color: 'rgb(145,5,8)' }}>Home</a>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset" style={{ color: 'rgb(145,5,8)' }}>Settings</a>
+                  <a href="/patients" className="text-reset" style={{ color: 'rgb(145,5,8)' }}>Patients</a>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset" style={{ color: 'rgb(145,5,8)' }}>Orders</a>
+                  <a href="/doctors" className="text-reset" style={{ color: 'rgb(145,5,8)' }}>Doctors</a>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset" style={{ color: 'rgb(145,5,8)' }}>Help</a>
+                  <a href="/nurses" className="text-reset" style={{ color: 'rgb(145,5,8)' }}>Nurses</a>
                 </p>
               </div>
 
               <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                 <h6 className="text-uppercase fw-bold mb-4" style={{ color: 'rgb(145,5,8)' }}>Contact</h6>
-                <p><i className="fas fa-home me-3"></i> New York, NY 10012, US</p>
-                <p><i className="fas fa-envelope me-3"></i> info@example.com</p>
-                <p><i className="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                <p><i className="fas fa-print me-3"></i> + 01 234 567 89</p>
+                <p><i className="fas fa-home me-3"></i> Nairobi, NB 10012, Kenya</p>
+                <p><i className="fas fa-envelope me-3"></i> ZahiraCare@davidparsley.com</p>
+                <p><i className="fas fa-phone me-3"></i> + 254 701698098</p>
               </div>
             </div>
           </div>
         </section>
-
         {/* Copyright */}
-        <div className="text-center p-4" style={{ color: 'rgb(248,240,240)',backgroundColor: 'rgb(145,5,8)' }}>
-          © 2024 Copyright:
+        <div className="text-center p-4" >
+          © 2024 Copyright: David Parsley
         </div>
       </footer>
     </div>
