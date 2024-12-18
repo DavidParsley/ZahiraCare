@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, joinedload
 from models import get_db, Patient, Doctor, Nurse
 from schemas import CreatePatientSchema, UpdatePatientSchema, CreateDoctorSchema, UpdateDoctorSchema, CreateNurseScheme,UpdateNurseScheme
 
@@ -19,8 +19,8 @@ def index():
 @app.get('/patients')
 def patients(session: Session = Depends(get_db)):
     # logic to retrive all patients
-    patients = session.query(Patient).all()
-    # patients = session.query(Patient).all().join(Doctor)
+    patients = session.query(Patient).options(joinedload(Patient.doctor),joinedload(Patient.nurse)).all()
+    #The options(joinload()) is to join the relationship between our patients and there doctors from the table    
 
     return patients
 
@@ -42,8 +42,9 @@ def create_patient(patient: CreatePatientSchema, session: Session = Depends(get_
 @app.get('/patients/{patient_id}')
 def get_patient(patient_id: int, session: Session = Depends(get_db)):
      # logic to getting a single patient
-    patient = session.query(Patient).filter(Patient.id == patient_id).first()
-   
+    patient = session.query(Patient).options(joinedload(Patient.doctor), joinedload(Patient.nurse)).filter(Patient.id == patient_id).first()
+    #The options(joinload()) is to join the relationship between our patients and there doctors from the table
+
     print(patient_id)    
     return  patient
 
