@@ -5,18 +5,18 @@ export default function Home() {
     <div
       style={{
         backgroundColor: "rgb(145,5,8)",
-        height: "500px",
+        minHeight: "100vh",
+        width: "85vw", 
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
       }}
     >
-      <h1 style={{ color: "rgb(248,240,240)" }}>Welcome To ZahiraCare</h1>
+      <h1 style={{ color: "rgb(248,240,240)",  fontWeight: "bolder" }}>Welcome To ZahiraCare</h1>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        height="110x"
+        height="110px"  // Fixed the "x" typo in height
         width="110px"
-
         viewBox="0 -960 960 960"
         fill="#e8eaed"
       >
