@@ -26,6 +26,34 @@ Base = declarative_base()
 2. It must have at least one column defined
 """
 
+
+class Doctor(Base):
+    __tablename__ = "doctors"
+
+    id = Column(Integer(), primary_key=True)
+    name = Column(Text(), nullable= False)
+    department = Column(Text(), nullable=False)
+    specialization = Column(Text(), nullable=False)
+    email = Column(VARCHAR(), nullable=False, unique=True)
+    phone = Column(VARCHAR(), nullable=False, unique=True)
+    on_duty = Column(Boolean(), nullable=False)
+    create_at = Column(DateTime(), default=datetime.now())
+
+    patients = relationship("Patient", backref="doctor")
+
+
+class Nurse(Base):
+    __tablename__ = "nurses"
+
+    id = Column(Integer(), primary_key=True)
+    name = Column(Text(), nullable= False)
+    email = Column(VARCHAR(), nullable=False, unique=True)
+    phone = Column(VARCHAR(), nullable=False, unique=True)
+    on_duty = Column(Boolean(), nullable=False)
+    create_at = Column(DateTime(), default=datetime.now())
+
+    patients = relationship("Patient", backref="nurse")
+    
 class Patient(Base):
     __tablename__ = "patients"
 
@@ -39,40 +67,11 @@ class Patient(Base):
     doctor_id = Column(Integer(), ForeignKey('doctors.id'))
     nurse_id = Column(Integer(), ForeignKey('nurses.id'))
     
-    
-    doctor = relationship("Doctor", back_populates="patients")
-    nurse = relationship("Nurse", back_populates="patients")
+
+    # doctor = relationship("Doctor", back_populates="patients")
+    # nurse = relationship("Nurse", back_populates="patients")
 
 
-    
-class Doctor(Base):
-    __tablename__ = "doctors"
-
-    id = Column(Integer(), primary_key=True)
-    name = Column(Text(), nullable= False)
-    department = Column(Text(), nullable=False)
-    specialization = Column(Text(), nullable=False)
-    email = Column(VARCHAR(), nullable=False, unique=True)
-    phone = Column(VARCHAR(), nullable=False, unique=True)
-    on_duty = Column(Boolean(), nullable=False)
-    create_at = Column(DateTime(), default=datetime.now())
-
-    patients = relationship("Patient", back_populates="doctor")
-
-
-
-class Nurse(Base):
-    __tablename__ = "nurses"
-
-    id = Column(Integer(), primary_key=True)
-    name = Column(Text(), nullable= False)
-    email = Column(VARCHAR(), nullable=False, unique=True)
-    phone = Column(VARCHAR(), nullable=False, unique=True)
-    on_duty = Column(Boolean(), nullable=False)
-    create_at = Column(DateTime(), default=datetime.now())
-
-    patients = relationship("Patient", back_populates="nurse")
-# 
 
 
 
