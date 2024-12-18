@@ -1,6 +1,9 @@
 from pydantic import BaseModel
 from typing import Optional
-
+# What is Optional in Python?
+# In Python, Optional is a type hint provided by the typing module. It is used to indicate that a field or 
+# variable can either be of a specific type or None. This is particularly useful when you want to define 
+# that a field is not required, and it's okay for the field to be missing or None.
 
 
 # Patient Section
