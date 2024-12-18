@@ -192,3 +192,16 @@ footer {
   margin: 0.3rem 0;
   color: #555;
 }
+
+/* Right-side info in the card */
+.right-info {
+  padding: 1rem;
+  background-color: #fafafa;
+  color: #333;
+}
+
+.created-date {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #777;
+}
