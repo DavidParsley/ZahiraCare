@@ -114,18 +114,28 @@ export default function IndividualDoctor() {
           <input
             type="text"
             value={email}
-            onChange={(e) => setAge(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             className="form-input"
             placeholder="Enter Email"
           />
         </div>
+        <div className="form-group">
+          <label>Phone</label>
+          <input
+            type="text"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            className="form-input"
+            placeholder="Enter Phone"
+          />
+        </div>
 
         <div className="form-group">
-          <label></label>
+          <label>Department</label>
           <input
             type="text"
             value={department}
-            onChange={(e) => setDisease(e.target.value)}
+            onChange={(e) => setDepartment(e.target.value)}
             className="form-input"
             placeholder="Enter Department"
           />
@@ -136,7 +146,7 @@ export default function IndividualDoctor() {
           <input
             type="text"
             value={specialization}
-            onChange={(e) => setPhone(e.target.value)}
+            onChange={(e) => setSpecialization(e.target.value)}
             className="form-input"
             placeholder="Enter Specialization"
           />
