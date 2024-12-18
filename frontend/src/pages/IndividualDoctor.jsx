@@ -84,6 +84,9 @@ export default function IndividualDoctor() {
             <li>
               <strong>Status:</strong> {doctor.on_duty ? "On Duty" : "Off Duty"}
             </li>
+            <li>
+              <strong>Date created: {new Date(doctor.create_at).toDateString()}</strong>
+            </li>
           </ul>
         </div>
         <div className="card-footer">
