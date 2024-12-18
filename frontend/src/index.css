@@ -235,8 +235,8 @@ footer {
 }
 /*  Patient, Doctor, and Nurse Components Styling Ends here */
 
-/* IndividualPatient Component Styling Starts here  */
 
+/* IndividualPatient Component Styling Starts here  */
 /* Patient container with padding and center alignment */
 .patient-container {
   display: flex;
@@ -360,5 +360,18 @@ footer {
 .update-btn:hover {
   background-color: #2980b9;
 }
-
 /* IndividualPatient Component Styling Ends here  */
+
+/* footer slogan styling starts here  */
+/* Targeting only p tags with the class 'slogan' */
+.slogan {
+  color: #000000;
+  transition: color 0.3s ease; /* Smooth transition */
+  font-weight: bold; 
+}
+
+/* Hover effect */
+.slogan:hover {
+  color: rgb(145, 5, 8);
+}
+/* footer slogan styling ends here  */
