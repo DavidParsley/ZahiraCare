@@ -64,20 +64,39 @@ export default function IndividualPatient() {
     <div className="patient-container">
       <div className="patient-card">
         <div className="card-header">
+          <img
+            className="profile-img"
+            src={`https://ui-avatars.com/api/?name=${patient.name}&background=random`}
+            alt="Profile"
+          />
           <h3 className="card-title">{patient.name}</h3>
         </div>
         <div className="card-body">
           <ul className="patient-details">
-            <li><strong>Age:</strong> {patient.age}</li>
-            <li><strong>Illness:</strong> {patient.illness}</li>
-            <li><strong>Email:</strong> {patient.email}</li>
-            <li><strong>Phone:</strong> {patient.phone}</li>
-            <li><strong>Doctor:</strong> {patient.doctor?.name}</li>
-            <li><strong>Nurse:</strong> {patient.nurse?.name}</li>
+            <li>
+              <strong>Age:</strong> {patient.age}
+            </li>
+            <li>
+              <strong>Illness:</strong> {patient.illness}
+            </li>
+            <li>
+              <strong>Email:</strong> {patient.email}
+            </li>
+            <li>
+              <strong>Phone:</strong> {patient.phone}
+            </li>
+            <li>
+              <strong>Doctor:</strong> {patient.doctor?.name}
+            </li>
+            <li>
+              <strong>Nurse:</strong> {patient.nurse?.name}
+            </li>
           </ul>
         </div>
         <div className="card-footer">
-          <button className="delete-btn" onClick={handleDelete}>Delete Patient</button>
+          <button className="delete-btn" onClick={handleDelete}>
+            Delete Patient
+          </button>
         </div>
       </div>
 
@@ -138,7 +157,9 @@ export default function IndividualPatient() {
           />
         </div>
 
-        <button type="submit" className="update-btn">Update</button>
+        <button type="submit" className="update-btn">
+          Update
+        </button>
       </form>
     </div>
   );
