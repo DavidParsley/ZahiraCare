@@ -91,6 +91,9 @@ export default function IndividualPatient() {
             <li>
               <strong>Nurse:</strong> {patient.nurse?.name}
             </li>
+            <li>
+              <strong> Date created: {new Date(patient.create_at).toDateString()}</strong>
+            </li>
           </ul>
         </div>
         <div className="card-footer">
