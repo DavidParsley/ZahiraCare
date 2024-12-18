@@ -22,9 +22,9 @@ function App() {
           <Route path="/doctors" element={<Doctor />} />
           <Route path="/nurses" element={<Nurse />} />
           <Route path="/patients" element={<Patient />} />
-          <Route path="/indivudualPatient/:id" element={<IndividualPatient />}/>
-          <Route path="/indivudualDoctor/:id" element={<IndividualDoctor />}/>
-          <Route path="/indivudualNurse/:id" element={<IndividualNurse />}/>
+          <Route path="/individualpatient/:id" element={<IndividualPatient />}/>
+          <Route path="/individualdoctor/:id" element={<IndividualDoctor />}/>
+          <Route path="/individualnurse/:id" element={<IndividualNurse />}/>
         </Route>
       </Routes>
     </BrowserRouter>
