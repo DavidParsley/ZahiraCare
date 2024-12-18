@@ -1,7 +1,7 @@
 /* Set default background color for all pages */
 body {
   background-color: rgb(248, 240, 240); /* Default for all pages */
-  margin: 0;
+  margin: auto;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -15,9 +15,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: left;
 }
 
+
+/* Global navbar styles */
 .navbar, .footer {
   background-color: rgb(248, 240, 240);
   border-radius: 10px;
@@ -25,13 +27,24 @@ body {
 
 .navbar a, .footer a {
   color: rgb(145, 5, 8); /* Default link color */
-  font-weight: bolder; /* Make the text bolder */
-  text-decoration: none; /* Remove underlines from links */
+  font-weight: bolder;
+  text-decoration: none;
 }
 
+/* Prevent hover background on SVG */
 .navbar a:hover, .footer a:hover {
-  color: rgb(248, 240, 240); /* Hover text color */
-  background-color: rgb(145, 5, 8); /* Hover background color */
+  color:  #000000; 
+  background-color: transparent; 
+}
+
+/* Specifically target the SVG inside the navbar link */
+.navbar a svg {
+  fill:  #000000
+}
+
+/* Ensure SVG doesn't change color on hover */
+.navbar a:hover svg {
+  fill: rgb(145, 5, 8) 
 }
 
 /* Ensure Navbar is always at the top and Footer at the bottom */
@@ -40,6 +53,7 @@ body {
   top: 0;
   z-index: 1000;
 }
+
 
 footer {
   margin-top: auto; /* Push footer to the bottom */
@@ -50,7 +64,6 @@ footer {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
 /*  Patient, Doctor, and Nurse Components Styling Starts here */
 
 
