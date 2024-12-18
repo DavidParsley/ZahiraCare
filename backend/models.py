@@ -68,11 +68,3 @@ class Patient(Base):
     nurse_id = Column(Integer(), ForeignKey('nurses.id'))
     
 
-    # doctor = relationship("Doctor", back_populates="patients")
-    # nurse = relationship("Nurse", back_populates="patients")
-
-
-
-
-
-
