@@ -1,4 +1,6 @@
 from pydantic import BaseModel
+from typing import Optional
+
 
 
 # Patient Section
@@ -7,18 +9,18 @@ class CreatePatientSchema(BaseModel):
     age: int
     illness: str
     email: str
-    phone: str
+    phone: int
     doctor_id: int
     nurse_id: int
 
 class UpdatePatientSchema(BaseModel):
-    name: str 
-    age: int 
-    illness: str 
-    email: str 
-    phone: int
-    doctor_id: int 
-    nurse_id: int 
+    name: Optional[str] = None 
+    age: Optional[int] = None
+    disease: Optional[str] = None
+    email: Optional[str] = None
+    phone: Optional[int] = None
+    doctor_id: Optional[int] = None
+    nurse_id: Optional[int] = None
 
 
 
