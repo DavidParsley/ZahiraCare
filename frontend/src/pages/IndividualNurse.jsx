@@ -124,6 +124,7 @@ export default function IndividualNurse() {
             checked={on_duty}
             onChange={(e) => setOn_duty(e.target.checked)}
             className="form-check-input"
+            style={{ marginLeft: '10px' }}
           />
         </div>
         <button type="submit" className="update-btn">
