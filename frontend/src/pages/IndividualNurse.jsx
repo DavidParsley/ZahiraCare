@@ -102,9 +102,19 @@ export default function IndividualNurse() {
           <input
             type="text"
             value={email}
-            onChange={(e) => setAge(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             className="form-input"
             placeholder="Enter Email"
+          />
+        </div>
+        <div className="form-group">
+          <label>Phone</label>
+          <input
+            type="text"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            className="form-input"
+            placeholder="Enter Phone"
           />
         </div>
         <div className="mb-3">
