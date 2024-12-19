@@ -13,7 +13,7 @@ export default function IndividualDoctor() {
   const [on_duty, setOn_duty] = useState(false);
 
   useEffect(() => {
-    fetch(`http://http://http://127.0.0.1:8000/doctors/${id}`)
+    fetch(`http://127.0.0.1:8000/doctors/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setDoctor(data);
@@ -28,7 +28,7 @@ export default function IndividualDoctor() {
   }, [id]);
 
   function handleDelete() {
-    fetch(`http://http://127.0.0.1:8000/doctors/${id}`, {
+    fetch(`http://127.0.0.1:8000/doctors/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -38,7 +38,7 @@ export default function IndividualDoctor() {
 
   function handleUpdate(e) {
     e.preventDefault();
-    fetch(`http://http://127.0.0.1:8000/doctors/${id}`, {
+    fetch(`http://127.0.0.1:8000/doctors/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
