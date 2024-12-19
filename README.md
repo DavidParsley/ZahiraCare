@@ -56,7 +56,7 @@ ZahiraCare centralizes the management of patients, doctors, and nurses, making i
 # Links
 Database Diagram Link: https://dbdiagram.io/d/hospital-db-Phase-3-project-675fd432e763df1f000aa077
 Excalidraw Link: https://excalidraw.com/#json=XGGYgAKo8nvIHlRlptPw9,J9cQDsab2atCVLcoZh7EOA
-
+Goole Slides Link: https://docs.google.com/presentation/d/1tbn8qlSH6leP23ghx0DJ2NW3t8evtGfprjs-uGnK74E/edit?usp=sharing
 
 # Setup/Installation Instructions
 
