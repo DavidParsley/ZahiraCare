@@ -18,11 +18,13 @@ ZahiraCare centralizes the management of patients, doctors, and nurses, making i
 
 ## Table Relationships
 
-* Patients and Doctors: Many-to-one. A patient can have one doctor, but a doctor can manage multiple patients. 
-    doctor_id in the patients table references the id in the doctors table.
+* Patients and Doctors: Many-to-one. A patient can have one doctor, but a doctor can manage multiple patients.
+  
+  doctor_id in the patients table references the id in the doctors table.
 
 * Patients and Nurses: Many-to-one. A patient can have one nurse, but a nurse can handle multiple patients.
-    nurse_id in the patients table references the id in the nurses table.
+  
+  nurse_id in the patients table references the id in the nurses table.
 
 * Doctors and Nurses: Indirect relationship, as both interact with patients, but there is no direct relationship between them.
 
@@ -59,6 +61,7 @@ Excalidraw Link: https://excalidraw.com/#json=XGGYgAKo8nvIHlRlptPw9,J9cQDsab2atC
 # Setup/Installation Instructions
 
 ## Fork the GitHub repository.
+
 * Clone the repository to your local machine using the command:
 
 * git clone <repository_url>
@@ -91,9 +94,9 @@ Excalidraw Link: https://excalidraw.com/#json=XGGYgAKo8nvIHlRlptPw9,J9cQDsab2atC
 # Technologies Used
 
 * React: JavaScript library for building the user interface.
-* FastApi:
-* Alembic:
-* SQLAlchemy:
+* FastApi: A fast web framework for building APIs with Python.
+* Alembic: A tool for managing database schema changes.
+* SQLAlchemy: A toolkit and ORM for interacting with databases in Python.
 * Bootstrap: For responsive and modern UI design.
 * CSS: Custom styles for a polished UI.
 
