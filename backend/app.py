@@ -92,3 +92,78 @@ def delete_patient(patient_id: int, session: Session = Depends(get_db)):
  
     print(patient_id)   
     return  {"messeage": f"{patient.name} deleted successfully"}
+
+
+     #############################################################################################################################
+
+# defining route(s)
+@app.get('/')
+def index():
+    return {"messeage": "Welcome to my hospital app"}
+
+# GET -> retrive all resources
+@app.get('/doctors')
+def doctors(session: Session = Depends(get_db)):
+    doctors = session.query(Doctor).all()
+    # logic to retrive doctors
+    return doctors
+
+# POST -> create a resource INSERT INTO doctors ()  VALUES ()
+@app.post('/doctors')
+def create_doctor(doctor: CreateDoctorSchema, session: Session = Depends(get_db)):
+    # logic to create doctor
+    new_doctor = Doctor(**doctor.model_dump())
+    session.add(new_doctor)
+    session.commit()
+    # retrive the inserted doctor
+    session.refresh(new_doctor)
+    return  {"messeage": "doctor created successfully", "doctor": new_doctor}
+
+# GET -> retrive a single resourse
+@app.get('/doctors/{doctor_id}')
+def get_doctor(doctor_id: int, session: Session = Depends(get_db)):
+    # logic to update doctor
+    doctor = session.query(Doctor).filter(Doctor.id == doctor_id).first()
+    
+    print(doctor_id)    
+    return  doctor
+
+
+# PUT/PATCH -> update a resource
+@app.patch('/doctors/{doctor_id}')
+def update_doctor(doctor_id: int, update_doctor: UpdateDoctorSchema, session: Session = Depends(get_db)):
+    #  logic to update a doctor
+    doctor = session.query(Doctor).filter(Doctor.id == doctor_id).first()
+
+    if update_doctor.name:
+        doctor.name = update_doctor.name
+    if update_doctor.email:
+        doctor.email = update_doctor.email
+    if update_doctor.department:
+        doctor.department = update_doctor.department
+    if update_doctor.specialization:
+        doctor.specialization = update_doctor.specialization
+    if update_doctor.phone:
+        doctor.phone = update_doctor.phone
+    if update_doctor.on_duty is not None:
+        doctor.on_duty = update_doctor.on_duty                    
+
+    session.commit()
+    session.refresh(doctor)
+    print(doctor_id)    
+    return doctor
+
+# DELETE -> delete a resource
+@app.delete('/doctors/{doctor_id}')
+def delete_doctor(doctor_id: int, session: Session = Depends(get_db)):
+    # logic to delete a doctor 
+    doctor = session.query(Doctor).filter(Doctor.id == doctor_id).first()
+    if doctor is None:
+        return  {"messeage": "Doctor Not Found !"}
+    
+    session.delete(doctor)
+    session.commit()
+
+    print(doctor_id)   
+    return  {"messeage": f"{doctor.name} Deleted successfully"}
+    
