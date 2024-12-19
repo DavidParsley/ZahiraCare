@@ -14,7 +14,7 @@ export default function IndividualPatient() {
   const [nurse_id, setNurse_id] = useState(0);
 
   useEffect(() => {
-    fetch(`http://http://127.0.0.1:8000/patients/${id}`)
+    fetch(`http://127.0.0.1:8000/patients/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setPatient(data);
@@ -30,7 +30,7 @@ export default function IndividualPatient() {
   }, [id]);
 
   function handleDelete() {
-    fetch(`http://http://127.0.0.1:8000/patients/${id}`, {
+    fetch(`http://127.0.0.1:8000/patients/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -40,7 +40,7 @@ export default function IndividualPatient() {
 
   function handleUpdate(e) {
     e.preventDefault();
-    fetch(`http://http://127.0.0.1:8000/patients/${id}`, {
+    fetch(`http://127.0.0.1:8000/patients/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
