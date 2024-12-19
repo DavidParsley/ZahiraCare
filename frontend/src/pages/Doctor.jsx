@@ -163,7 +163,7 @@ export default function Doctor() {
                     backgroundColor: "rgb(145,5,8)",
                   }}
                 >
-                  Add Patient
+                  Add Doctor
                 </button>
               </div>
             </form>
