@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Patient() {
 
-  const nav =useNavigate()
+  const nav = useNavigate();
 
   const [patients, setPatients] = useState([]);
   const [doctors, setDoctors] = useState([]); 
@@ -18,7 +18,6 @@ export default function Patient() {
   const [doctor_id, setDoctor_id] = useState(0);
   const [nurse_id, setNurse_id] = useState(0);
 
-
   useEffect(() => {
     fetch("https://zahiracare.onrender.com/patients", {
       method: "GET",
@@ -27,7 +26,7 @@ export default function Patient() {
       .then((data) => setPatients(data))
       .catch((error) => console.log(error));
 
-    // Fetching  doctors to use in the add patient modal.
+    // Fetching doctors to use in the add patient modal.
     fetch("https://zahiracare.onrender.com/doctors", {
       method: "GET",
     })
@@ -64,18 +63,21 @@ export default function Patient() {
     .then((res) => res.json())
     .then((newPatient) => {
       setPatients([...patients, newPatient]); 
+      
+      const modal = new window.bootstrap.Modal(document.getElementById('patientModal'));
+      modal.hide();
     })
     .then(() => nav("/patients")) 
-    .catch((error) => console.error("Error adding patient:", error))
+    .catch((error) => console.error("Error adding patient:", error));
   }
 
   return (
     <main className="patient-container">
       <button
-        className="btn  add-patient-btn"
+        className="btn add-patient-btn"
         data-bs-toggle="modal"
         data-bs-target="#patientModal"
-        style={{ color:  'rgb(248,240,240)', backgroundColor: 'rgb(145,5,8)',  }}
+        style={{ color: 'rgb(248,240,240)', backgroundColor: 'rgb(145,5,8)' }}
       >
         Add New Patient
       </button>
@@ -201,7 +203,7 @@ export default function Patient() {
                 <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
                   Close
                 </button>
-                <button type="submit" className="btn"style={{ color:  'rgb(248,240,240)', backgroundColor: 'rgb(145,5,8)',  }}>
+                <button type="submit" className="btn" style={{ color: 'rgb(248,240,240)', backgroundColor: 'rgb(145,5,8)' }}>
                   Add Patient
                 </button>
               </div>
@@ -210,7 +212,7 @@ export default function Patient() {
         </div>
       </div>
       
-        {/* This is where the patients from the database are being rendered  */}
+      {/* This is where the patients from the database are being rendered */}
       <div className="patient-cards">
         {patients.map((patient) => (
           <div className="patient-card" key={patient.id}>
