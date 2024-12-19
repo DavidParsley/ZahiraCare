@@ -120,4 +120,4 @@ Excalidraw Link: https://excalidraw.com/#json=XGGYgAKo8nvIHlRlptPw9,J9cQDsab2atC
 # License
 *Licenced under the [MT-licence](https://opensource.org/license/mit)*
 
-Copyright (c) 2024 **CareerConnect Team**
+Copyright (c) 2024 **David Parsley**
