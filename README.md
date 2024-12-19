@@ -54,7 +54,7 @@ ZahiraCare centralizes the management of patients, doctors, and nurses, making i
 * Delete a nurse: Remove a nurse from the system by their ID.
 
 # Live Server
-* View the live web app on: ZahiraCare Demo
+* View the live web app on: ZahiraCare Demo [https://zahiracare-1.onrender.com/]
 
 # Links
 * Database Diagram Link: https://dbdiagram.io/d/hospital-db-Phase-3-project-675fd432e763df1f000aa077
