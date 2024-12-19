@@ -167,3 +167,76 @@ def delete_doctor(doctor_id: int, session: Session = Depends(get_db)):
     print(doctor_id)   
     return  {"messeage": f"{doctor.name} Deleted successfully"}
     
+
+              #############################################################################################################################
+
+# defining route(s)
+@app.get('/')
+def index():
+    return {"messeage": "Welcome to my hospital app"}
+
+# GET -> retrive  resources
+@app.get('/nurses')
+def nurses(session: Session = Depends(get_db)):
+    # logic to  retrive all nurses
+    nurses = session.query(Nurse).all()
+    return nurses
+
+# POST -> create a resource
+@app.post('/nurses')
+def create_nurse(nurse: CreateNurseScheme, session: Session = Depends(get_db)):
+    # logic to create a nurse
+    new_nurse = Nurse(**nurse.model_dump())
+
+    session.add(new_nurse)
+    session.commit()
+    # retrive the inserted nurse
+    session.refresh(new_nurse)
+    return  {"messeage": "Nurse created successfully", "nurse": new_nurse}
+
+# GET -> retrive a single resourse
+@app.get('/nurses/{nurse_id}')
+def get_nurse(nurse_id: int, session: Session = Depends(get_db) ):
+    #logic to getting a single nurse
+    nurse = session.query(Nurse).filter(Nurse.id == nurse_id).first()
+    print(nurse_id)    
+    return  nurse
+
+
+# PUT/PATCH -> update a resource
+@app.patch('/nurses/{nurse_id}')
+def update_nurse(nurse_id: int, update_nurse:UpdateNurseScheme, session: Session = Depends(get_db)):
+    #logic to update a nurse
+    nurse = session.query(Nurse).filter(Nurse.id == nurse_id).first()
+    
+    if nurse is None:
+        return {"messeage": "Patient Not Found !"}
+    
+    if update_nurse.name:
+        nurse.name = update_nurse.name
+    if update_nurse.email:
+        nurse.email = update_nurse.email
+    if update_nurse.phone:
+        nurse.phone = update_nurse.phone
+    if update_nurse.on_duty is not None:
+        nurse.on_duty = update_nurse.on_duty
+
+    session.commit()
+    session.refresh(nurse)                
+   
+    print(nurse_id)    
+    return nurse 
+
+# DELETE -> delete a resource(s)
+@app.delete('/nurses/{nurse_id}')
+def delete_nurse(nurse_id: int, session: Session = Depends(get_db)):
+    #logic to delete a nurse 
+    nurse = session.query(Nurse).filter(Nurse.id == nurse_id).first()
+    if nurse is None:
+        return {"messeage": "Nurse Not Found !"}
+
+    # If nurse exists, delete it its the oposite of  session.add(new_patient) in create patient
+    session.delete(nurse)
+    session.commit()
+    print(nurse_id)   
+    return  {"messeage": f"{nurse.name} deleted successfully"}
