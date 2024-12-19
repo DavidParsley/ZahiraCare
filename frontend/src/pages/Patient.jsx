@@ -12,7 +12,7 @@ export default function Patient() {
 
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
-  const [disease, setDisease] = useState("");
+  const [illness, setIllness] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [doctor_id, setDoctor_id] = useState(0);
@@ -54,7 +54,7 @@ export default function Patient() {
       body: JSON.stringify({
         name,
         age,
-        disease,
+        illness,
         email,
         phone,
         doctor_id,
@@ -128,11 +128,11 @@ export default function Patient() {
                 </div>
 
                 <div className="form-group">
-                  <label>Disease</label>
+                  <label>Illness</label>
                   <input
                     type="text"
-                    value={disease}
-                    onChange={(e) => setDisease(e.target.value)}
+                    value={illness}
+                    onChange={(e) => setIllness(e.target.value)}
                     className="form-control"
                     placeholder="Enter Disease"
                     required 
