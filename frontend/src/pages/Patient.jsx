@@ -20,7 +20,7 @@ export default function Patient() {
 
 
   useEffect(() => {
-    fetch("http://http://127.0.0.1:8000/patients", {
+    fetch("http://127.0.0.1:8000/patients", {
       method: "GET",
     })
       .then((response) => response.json())
@@ -28,7 +28,7 @@ export default function Patient() {
       .catch((error) => console.log(error));
 
     // Fetching  doctors to use in the add patient modal.
-    fetch("http://http://127.0.0.1:8000/doctors", {
+    fetch("http://127.0.0.1:8000/doctors", {
       method: "GET",
     })
       .then((response) => response.json())
@@ -36,7 +36,7 @@ export default function Patient() {
       .catch((error) => console.log(error));
 
     // Fetch nurses to use in the add patient modal.
-    fetch("http://http://127.0.0.1:8000/nurses", {
+    fetch("http://127.0.0.1:8000/nurses", {
       method: "GET",
     })
       .then((response) => response.json())
@@ -46,7 +46,7 @@ export default function Patient() {
 
   function handleAddPatient(e) {
     e.preventDefault();
-    fetch(`http://http://127.0.0.1:8000/patients`, {
+    fetch(`http://127.0.0.1:8000/patients`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
