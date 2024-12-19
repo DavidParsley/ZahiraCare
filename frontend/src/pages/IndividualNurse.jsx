@@ -11,7 +11,7 @@ export default function IndividualNurse() {
   const [on_duty, setOn_duty] = useState(false);
 
   useEffect(() => {
-    fetch(`http://http://127.0.0.1:8000/nurses/${id}`)
+    fetch(`http://127.0.0.1:8000/nurses/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setNurse(data);
@@ -24,7 +24,7 @@ export default function IndividualNurse() {
   }, [id]);
 
   function handleDelete() {
-    fetch(`http://http://127.0.0.1:8000/nurses/${id}`, {
+    fetch(`http://127.0.0.1:8000/nurses/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -34,7 +34,7 @@ export default function IndividualNurse() {
 
   function handleUpdate(e) {
     e.preventDefault();
-    fetch(`http://http://127.0.0.1:8000/nurses/${id}`, {
+    fetch(`http://127.0.0.1:8000/nurses/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
