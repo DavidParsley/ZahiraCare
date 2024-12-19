@@ -134,7 +134,7 @@ export default function Patient() {
                     value={illness}
                     onChange={(e) => setIllness(e.target.value)}
                     className="form-control"
-                    placeholder="Enter Disease"
+                    placeholder="Enter Illness"
                     required 
                   />
                 </div>
