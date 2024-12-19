@@ -9,7 +9,7 @@ export default function Nurse() {
   const [on_duty, setOn_duty] = useState(false);
 
   useEffect(() => {
-    fetch("http://http://127.0.0.1:8000/nurses", {
+    fetch("http://127.0.0.1:8000/nurses", {
       method: "GET",
     })
       .then((response) => response.json())
@@ -19,7 +19,7 @@ export default function Nurse() {
 
   function handleAddDoctor(e) {
     e.preventDefault();
-    fetch(`http://http://127.0.0.1:8000/nurses`, {
+    fetch(`http://127.0.0.1:8000/nurses`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
