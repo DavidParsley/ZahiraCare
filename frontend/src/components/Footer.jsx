@@ -62,7 +62,7 @@ export default function Footer() {
                 </p>
                 <p className="d-flex align-items-center">
                   <i className="fas fa-envelope me-3" style={{ color: 'rgb(145,5,8)' }}></i>
-                  ZahiraCare@davidparsley.com
+                  ZahiraCare@david.com
                 </p>
                 <p className="d-flex align-items-center">
                   <i className="fas fa-phone me-3" style={{ color: 'rgb(145,5,8)' }}></i>
