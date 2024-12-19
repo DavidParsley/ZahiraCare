@@ -100,6 +100,8 @@ ZahiraCare centralizes the management of patients, doctors, and nurses, making i
 * SQLAlchemy: A toolkit and ORM for interacting with databases in Python.
 * Bootstrap: For responsive and modern UI design.
 * CSS: Custom styles for a polished UI.
+* Postgracesql : used postgracesql on render to deploy the database.
+* Render: Deployed the Website Service and the Website
 
 # Future Plans
 
