@@ -111,11 +111,10 @@ Excalidraw Link: https://excalidraw.com/#json=XGGYgAKo8nvIHlRlptPw9,J9cQDsab2atC
 
 * No known bugs at this time.
 
-# Support and Contact Details
+# Support and Contact Details:
+* If you encounter any issues or have questions, feel free to reach out to us:
 
-## If you encounter any issues or have questions, feel free to reach out to us:
-
-* David Parsley : davidparsley.kakhayanga@gmail.com
+* **David Parsley** : davidparsley.kakhayanga@gmail.com
 
 # License
 *Licenced under the [MT-licence](https://opensource.org/license/mit)*
