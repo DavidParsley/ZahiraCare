@@ -12,7 +12,7 @@ export default function Doctor() {
   const [on_duty, setOn_duty] = useState(false);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/doctors", {
+    fetch("https://zahiracare.onrender.com/doctors", {
       method: "GET",
     })
       .then((response) => response.json())
@@ -22,7 +22,7 @@ export default function Doctor() {
 
   function handleAddDoctor(e) {
     e.preventDefault();
-    fetch(`http://127.0.0.1:8000/doctors`, {
+    fetch(`https://zahiracare.onrender.com/doctors`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
