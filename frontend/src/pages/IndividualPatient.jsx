@@ -167,6 +167,7 @@
 //     </div>
 //   );
 // }
+
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -198,6 +199,7 @@ export default function IndividualPatient() {
       .catch((error) => console.error("Error fetching data:", error));
   }, [id]);
 
+  // Delete Patient
   function handleDelete() {
     fetch(`https://zahiracare.onrender.com/patients/${id}`, {
       method: "DELETE",
@@ -207,10 +209,18 @@ export default function IndividualPatient() {
       .catch((error) => console.error("Error deleting patient:", error));
   }
 
+  // Update Patient
   function handleUpdate(e) {
     e.preventDefault();
-  
-   
+    
+    console.log('Updating with values:', {
+      name,
+      age,
+      illness,
+      email,
+      phone,
+    });
+
     fetch(`https://zahiracare.onrender.com/patients/${id}`, {
       method: "PATCH",
       headers: {
@@ -221,14 +231,31 @@ export default function IndividualPatient() {
         age,
         illness,
         email,
-        phone, 
+        phone,
       }),
     })
-    .then((res) => res.json())
-      .then(() => {nav("/patients")})
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to update patient");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        console.log("Patient updated:", data);
+        // Refetch data after update to ensure the latest values are displayed
+        fetchPatientData();
+        nav("/patients");
+      })
       .catch((error) => console.error("Error updating patient:", error));
   }
-  
+
+  // Function to refetch patient data after update
+  function fetchPatientData() {
+    fetch(`https://zahiracare.onrender.com/patients/${id}`)
+      .then((response) => response.json())
+      .then((data) => setPatient(data))
+      .catch((error) => console.error("Error fetching updated patient data:", error));
+  }
 
   return (
     <div className="patient-container">
@@ -261,8 +288,8 @@ export default function IndividualPatient() {
             <li>
               <strong>Nurse:</strong> {patient.nurse?.name}
             </li>
-            <li><strong>
-                {" "}
+            <li>
+              <strong>
                 Date created: {new Date(patient.create_at).toDateString()}
               </strong>
             </li>
