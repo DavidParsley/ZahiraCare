@@ -225,7 +225,7 @@ export default function Patient() {
                   <h3>{patient.name}</h3>
                   <p>Age: {patient.age}</p>
                   <p>Phone: {patient.phone}</p>
-                  <p>Illness: {patient.disease}</p>
+                  <p>Illness: {patient.illness}</p>
                   <p>Email: {patient.email}</p>
                 </div>
               </div>

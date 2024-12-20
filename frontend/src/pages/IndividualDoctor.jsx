@@ -54,7 +54,7 @@ export default function IndividualDoctor() {
     })
       .then((res) => res.json())
       .then(() => nav("/doctors"))
-      .catch((error) => console.error("Error updating patient:", error));
+      .catch((error) => console.error("Error updating doctor:", error));
   }
   return (
     <div className="patient-container">
