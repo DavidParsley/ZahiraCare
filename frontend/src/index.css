@@ -67,8 +67,8 @@ footer {
   font-size: 3.2em;
   line-height: 1.1;
 }
-/*  Patient, Doctor, and Nurse Components Styling Starts here */
 
+/* Patient, Doctor, and Nurse Components Styling Starts here */
 
 /* Style for the patient list container */
 .patient-container {
@@ -233,8 +233,6 @@ footer {
   font-size: 0.9rem;
   color: #777;
 }
-/*  Patient, Doctor, and Nurse Components Styling Ends here */
-
 
 /* IndividualPatient Component Styling Starts here  */
 /* Patient container with padding and center alignment */
@@ -454,36 +452,31 @@ footer {
   padding: 20px;
   border: 2px solid #e0e0e0;
   border-radius: 10px;
-  background-color: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .no-page-content h1 {
-  font-size: 6rem;
-  color:  rgb(145, 5, 8);
-  margin-bottom: 20px;
-  font-weight: bold;
+  font-size: 3rem;
+  color: rgb(145, 5, 8);
 }
 
 .no-page-content p {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: #555;
-  margin-bottom: 20px;
 }
 
-.no-page-content .back-home {
-  font-size: 1rem;
-  color:  rgb(145, 5, 8);
+.no-page-content a {
+  font-size: 1.1rem;
+  color: rgb(145, 5, 8);
   text-decoration: none;
-  padding: 10px 20px;
-  border: 2px solid  rgb(145, 5, 8);
-  border-radius: 5px;
-  background-color: #fff;
-  transition: all 0.3s ease;
+  font-weight: bold;
 }
 
-.no-page-content .back-home:hover {
-  background-color:  rgb(145, 5, 8);
-  color: white;
+.no-page-content a:hover {
+  color: #000000;
 }
-/* NoPage Component Styling ends here */
+
+.no-page-content a svg {
+  fill: rgb(145, 5, 8);
+}
