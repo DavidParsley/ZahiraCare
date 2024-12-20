@@ -223,7 +223,6 @@ export default function IndividualPatient() {
         age,
         phone,
         illness,
-
       }),
     })
       .then((res) => res.json())
@@ -231,15 +230,7 @@ export default function IndividualPatient() {
       .catch((error) => console.error("Error updating patient:", error));
   }
 
-  // Function to refetch patient data after update
-  function fetchPatientData() {
-    fetch(`https://zahiracare.onrender.com/patients/${id}`)
-      .then((response) => response.json())
-      .then((data) => setPatient(data))
-      .catch((error) =>
-        console.error("Error fetching updated patient data:", error)
-      );
-  }
+
 
   return (
     <div className="patient-container">
