@@ -130,7 +130,7 @@ export default function IndividualPatient() {
           <input
             type="text"
             value={illness}
-            onChange={(e) => setDisease(e.target.value)}
+            onChange={(e) => setIllness(e.target.value)}
             className="form-input"
             placeholder="Enter Disease"
           />
