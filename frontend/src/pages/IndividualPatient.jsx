@@ -51,6 +51,8 @@ export default function IndividualPatient() {
         illness,
         email,
         phone,
+        doctor_id,
+        nurse_id,
       }),
     })
       .then((res) => res.json())
