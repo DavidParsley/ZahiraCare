@@ -8,7 +8,7 @@ from schemas import CreatePatientSchema, UpdatePatientSchema, CreateDoctorSchema
 app = FastAPI()
 
 # very impotant. middleware allows you to navigate / bypass the blocked fetch request from your fast api to your react
-app.add_middleware(CORSMiddleware, allow_origins=['*'], allow_methods = '*')
+app.add_middleware(CORSMiddleware, allow_origins=['*'], allow_methods = ['*'])
 
 # defining routes 
 @app.get('/')
