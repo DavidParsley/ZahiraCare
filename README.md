@@ -57,9 +57,10 @@ ZahiraCare centralizes the management of patients, doctors, and nurses, making i
 * View the live web app on: ZahiraCare Demo [https://zahiracare-1.onrender.com/]
 
 # Links
+* Google Slides Link: https://docs.google.com/presentation/d/1tbn8qlSH6leP23ghx0DJ2NW3t8evtGfprjs-uGnK74E/edit?usp=sharing
+* Demo Video Link: https://drive.google.com/file/d/1MFA0nEqbafBH27S2iNJpSDwYFM9PlAtJ/view?usp=sharing
 * Database Diagram Link: https://dbdiagram.io/d/hospital-db-Phase-3-project-675fd432e763df1f000aa077
 * Excalidraw Link: https://excalidraw.com/#json=XGGYgAKo8nvIHlRlptPw9,J9cQDsab2atCVLcoZh7EOA
-* Google Slides Link: https://docs.google.com/presentation/d/1tbn8qlSH6leP23ghx0DJ2NW3t8evtGfprjs-uGnK74E/edit?usp=sharing
 * Render database Link:https://zahiracare.onrender.com/
 
 # Setup/Installation Instructions
