@@ -19,7 +19,7 @@ class CreatePatientSchema(BaseModel):
 class UpdatePatientSchema(BaseModel):
     name: Optional[str] = None 
     age: Optional[int] = None
-    disease: Optional[str] = None
+    illness: Optional[str] = None
     email: Optional[str] = None
     phone: Optional[int] = None
     doctor_id: Optional[int] = None
