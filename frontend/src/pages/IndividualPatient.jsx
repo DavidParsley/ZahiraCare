@@ -220,6 +220,7 @@ export default function IndividualPatient() {
       body: JSON.stringify({
         name,
         email,
+        age,
         phone,
         illness,
 
