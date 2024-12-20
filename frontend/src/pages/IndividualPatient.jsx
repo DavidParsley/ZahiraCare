@@ -226,8 +226,8 @@ export default function IndividualPatient() {
       }),
     })
       .then((res) => res.json())
-      .then(() => nav("/doctors"))
-      .catch((error) => console.error("Error updating doctor:", error));
+      .then(() => nav("/patients"))
+      .catch((error) => console.error("Error updating patient:", error));
   }
 
   // Function to refetch patient data after update
