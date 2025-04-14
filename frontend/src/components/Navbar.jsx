@@ -55,7 +55,7 @@ export default function Navbar() {
                 </a>
               </li>
             </ul>
-            <form className="d-flex" role="search">
+            {/* <form className="d-flex" role="search">
               <input
                 className="form-control me-2"
                 type="search"
@@ -72,7 +72,7 @@ export default function Navbar() {
               >
                 Search
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
       </nav>
