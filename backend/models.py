@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker, relationship
 from datetime import datetime
 
 # connect to the hospital.db
-engine = create_engine('postgresql://admin:ZR9vKSYlusdgPVqXAjALuZiSemLOu0Sc@dpg-cti2vkqj1k6c739jtmp0-a.oregon-postgres.render.com/hospital_j16k', echo=True)
+engine = create_engine('postgresql://postgres.kpylbvuvffevdlqnsvvm:fuNXNGAYGy!Zv8X@aws-0-eu-central-1.pooler.supabase.com:5432/postgres', echo=True)
 
 # create a session
 Session = sessionmaker(bind=engine)
